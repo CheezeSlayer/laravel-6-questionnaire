@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>My Questionnaire App</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -30,6 +30,14 @@
                 justify-content: center;
             }
 
+            .list{
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+                /* display: none; */
+            }
+
             .position-ref {
                 position: relative;
             }
@@ -41,7 +49,7 @@
             }
 
             .content {
-                text-align: center;
+                text-align: left;
             }
 
             .title {
@@ -62,6 +70,16 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <!-- JavaScript Animation -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#list_features").css('display', 'none');
+                $("#list_features").fadeIn(2000);
+            });
+        </script>
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -81,18 +99,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    My Questionnaire App
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="list" id="list_features">
+                    <ul class="list-group">
+                        <li class="list-group-item">Create a User by Signing Up</li>
+                        <li class="list-group-item">Create a Questionnaire Survey</li>
+                        <li class="list-group-item">Add as Many Questions as You Like</li>
+                        <li class="list-group-item">Share Your Questionnaire with a link for Others to Take</li>
+                        <li class="list-group-item">Get statistics for each response</li>
+                    </ul>
                 </div>
             </div>
         </div>
